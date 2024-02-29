@@ -1,0 +1,14 @@
+// pipeline
+
+part 1) injestion
+
+todo
+// for each property, generate a unique property ID
+    - id: hash all the text from pdf and images
+    - store all the pictures in another DB under that ID
+
+- when user prompt for listing, make sure prompt includes returning ID which matches closest cosine then return images from ID
+
+DEADLINE: 1 week
+
+part 2) analysis

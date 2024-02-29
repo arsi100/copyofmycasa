@@ -1,0 +1,37 @@
+{
+  "description": "Welcome to Equiti Gate, a visionary development by Refine Development, strategically positioned on Sheikh Zayed Road in the heart of Downtown Jebel Ali. This prime location places you just a mere 10-minute drive away from the highly anticipated Palm Jebel Ali. Equiti Gate offers a lifestyle like no other, where every detail has been meticulously crafted to ensure the utmost convenience and comfort for its residents.",
+  "price": [
+    {
+      "price": "AED 580,000",
+      "footage": "355 sqft",
+      "bedrooms": "Studio"
+    },
+    {
+      "price": "AED 650,000",
+      "footage": "440 sqft",
+      "bedrooms": "Studio"
+    },
+    {
+      "price": "AED 790,000",
+      "footage": "621 sqft",
+      "bedrooms": "1 bedroom"
+    },
+    {
+      "price": "AED 1,000,000",
+      "footage": "740 sqft",
+      "bedrooms": "1 bedroom"
+    },
+    {
+      "price": "AED 1,390,000",
+      "footage": "1269 sqft",
+      "bedrooms": "3 bedroom"
+    },
+    {
+      "price": "AED 1,650,000",
+      "footage": "No info",
+      "bedrooms": "3 bedroom"
+    }
+  ],
+  "amenities": ["Swimming pool", "Gym", "Kids Play Area", "Running Track", "Retail Outlets", "Resident Lounge", "Basketball Court", "Table Tennis Area", "Co-working Space"],
+  "location": "Downtown Jebel Ali, United Arab Emirates"
+}

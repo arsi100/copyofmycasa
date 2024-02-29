@@ -1,0 +1,34 @@
+{
+  "description": "The Q Gardens Lofts 2 offers a thoughtfully designed and exceptionally detailed architectural masterpiece, to provide a mash-up of classic and vanguard, combining upscale comforts with a casual ethos. Welcome to a perfect setting for the indoor-outdoor comforts that redefine the future of urban living. Is a one-of-a-kind premium experience- crafted to meet the needs of your modern lifestyle. The interiors balance spa... Architecture Interior Location",
+  "price": [
+    {
+      "price": "AED 452,066",
+      "footage": "414 sqft / 38 m",
+      "bedrooms": "Studio"
+    },
+    {
+      "price": "AED 456,062",
+      "footage": "417 sqft / 39 m",
+      "bedrooms": "Studio"
+    },
+    {
+      "price": "AED 779,065",
+      "footage": "713 sqft / 66 m",
+      "bedrooms": "1 bedroom"
+    },
+    {
+      "price": "AED 990,771",
+      "footage": "861 sqft / 80 m",
+      "bedrooms": "1 bedroom"
+    }
+  ],
+  "amenities": [
+    "Indoors Cinema",
+    "Rooftop Swimming Pool",
+    "Kids Play Areas",
+    "Residents Sitting Area",
+    "Modern GYM",
+    "Podium Parking"
+  ],
+  "location": "Jumeirah Village Circle (JVC), United Arab Emirates"
+}

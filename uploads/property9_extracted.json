@@ -1,0 +1,38 @@
+{
+  "description": "Discover a haven of modern living at Albero by ORO24, a distinguished 15-storey residential masterpiece with studios, 1 & 2-bedroom apartments at Liwan, Dubai. This exclusive project introduces a limited edition homes, showcasing a fusion of contemporary elegance and natural charm. The development seamlessly integrates modern technology with natural surroundings, providing breathtaking views right from the comfort of home. Marvel at the skylines, architectural brilliance, and lush green surroundings that elevate the quality of life. The fusion of contemporary features and natural beauty sets this apart as a dream destination within a community that grants easy access to renowned landmarks and establishments. Step into a world of exclusivity where residents are treated to a plethora of world-class amenities. From a serene library for book enthusiasts to private lounges, a party hall for grand celebrations within the community, and a health club to maintain a healthy lifestyle, it caters to diverse tastes. The arcade zone, billiards, table tennis, and a chess room further enhance the community experience, catering to both leisure and socializing needs. Albero by ORO24 offers modern finishing with high-quality materials and equipped kitchens. It is located in the vibrant heart of Dubailand, Liwan, which presents a tranquil retreat adorned with extensive green landscapes. Families are attracted to Liwan for its serene ambiance and convenient access to educational institutions and universities located in the academic city. The property offers a range of facilities including a temperature-controlled swimming pool, cabana seating, rooftop lounge, rooftop health club, outdoor kids play area, walking trail, and a badminton court.",
+  "price": [
+    {
+      "price": "AED 490,000",
+      "footage": "360 sqft",
+      "bedrooms": "Studio"
+    },
+    {
+      "price": "AED 790,000",
+      "footage": "628 sqft",
+      "bedrooms": "1 bedroom"
+    },
+    {
+      "price": "AED 910,000",
+      "footage": "745 sqft",
+      "bedrooms": "2 bedroom"
+    }
+  ],
+  "amenities": [
+    "Serene library",
+    "Private lounges",
+    "Party hall",
+    "Health club",
+    "Arcade zone",
+    "Billiards",
+    "Table tennis",
+    "Chess room",
+    "Temperature-controlled swimming pool",
+    "Cabana seating",
+    "Rooftop lounge",
+    "Rooftop health club",
+    "Outdoor kids play area",
+    "Walking trail",
+    "Badminton court"
+  ],
+  "location": "Liwan, Dubai"
+}

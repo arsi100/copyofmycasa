@@ -1,0 +1,27 @@
+{
+  "description": "AG Central is a development in the thriving Dubai Residential Complex. Its modern design offers open plan living with bright interior spaces and private balconies. Come experience comfortable living in a community nestled in the heart of Dubai with easy access to transport links, whether it’s for work or leisure. The new residential development of 2B + G + 11 + R includes studios, one-bedroom units and two-bedroom apartments.",
+  "price": [
+    {
+      "price": "AED 854,913 - AED 948,643",
+      "footage": "1005 sqft / 93 m2 - 1116 sqft / 104 m2",
+      "bedrooms": "2"
+    },
+    {
+      "price": "No info",
+      "footage": "No info",
+      "bedrooms": "Studio"
+    },
+    {
+      "price": "No info",
+      "footage": "No info",
+      "bedrooms": "1"
+    }
+  ],
+  "amenities": [
+    "Swimming Pool",
+    "F&B & Retail",
+    "Smart home System"
+  ],
+  "facilities": [],
+  "location": "Dubailand, Dubai, United Arab Emirates"
+}
