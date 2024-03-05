@@ -9,7 +9,7 @@ import os
 # load environment variables
 dotenv.load_dotenv()
 OPEN_AI_KEY = os.getenv('OPEN_AI_KEY')
-DB_STRING = os.getenv('DB_STRING')
+DB_STRING = os.getenv('MONGODB_STRING')
 
 # initialize openai client
 client = OpenAI(api_key=OPEN_AI_KEY)
