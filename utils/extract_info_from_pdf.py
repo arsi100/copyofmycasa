@@ -150,6 +150,11 @@ def extract_info_from_pdf(path: str, add_to_db: bool = True, verbose: bool = Tru
       if (verbose):
         print('Adding data to database...')
       # Add to database
+        
+      # Chunk and add to vector db
+      upload_chunked_pdf_data(path)
+
+      # Store the json for book keeping
       json_response = str_to_json(str(response.choices[0].message.function_call.arguments))
       property_collection = get_collection(property_db, 'properties_embed')
       image_collection = get_collection(property_db, 'images')

@@ -1,39 +1,21 @@
-import os
-import sys
-from flask import Flask, request
-from werkzeug.utils import secure_filename
-from dotenv import load_dotenv
 from utils.extract_info_from_pdf import extract_info_from_pdf
 from utils.query_db import find_similar_documents
-from utils.extract_info_from_pdf import upload_chunked_pdf_data
+from werkzeug.utils import secure_filename
+from flask import Flask, request
+from dotenv import load_dotenv
+import os
 
 app = Flask(__name__)
 
 load_dotenv()
+
 OPEN_AI_KEY = os.getenv('OPEN_AI_KEY')
-
-'''
------------------------------------------------------------
-Extract real estate info into a JSON object from a PDF file
-Endpoint: /extract
-Method: POST
-Parameters: pdf_file (file) as string
-
-Endpoint: /query
-Method: POST
-Parameters: query (string)
-
-Example:
-# Replace '/path/to/your/file.pdf' with the server path to the PDF file
-# eventually this is going to be a file uploaded by the user or something
-curl -X POST -F "pdf_file=@/path/to/your/file.pdf" http://127.0.0.1:5000/extract
------------------------------------------------------------
-'''
 UPLOAD_FOLDER = 'uploads'
+
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in {'pdf'}
+
+
 
 @app.route('/query', methods=['POST'])
 def query():
@@ -50,6 +32,10 @@ def query():
 
 @app.route('/extract', methods=['POST'])
 def extract():
+
+    def allowed_file(filename):
+        return '.' in filename and filename.rsplit('.', 1)[1].lower() in {'pdf'}
+
     if 'pdf_file' not in request.files:
         return 'No file provided', 400
 
@@ -62,8 +48,7 @@ def extract():
     filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
     pdf_file.save(filepath)
 
-    #$extract_info_from_pdf(filepath)
-    upload_chunked_pdf_data(filepath)
+    extract_info_from_pdf(filepath)
 
     return 'File uploaded and processed successfully'
 
