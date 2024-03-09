@@ -1,0 +1,12 @@
+flow: on req frontend --> sign in with google (etc etc auth) --> fetch all conversations --> 
+
+fork --- load from side bar
+	 | 
+	 ---> make new conversations
+
+
+
+database 2 tables:
+
+1) users -> email, conversation id's
+2) conversation ids -> message jsons for each message it has container ai/human + MSG
