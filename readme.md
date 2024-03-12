@@ -33,16 +33,16 @@ DB_STRING='your mongodb connection string
 ### 4. Run the Flask Application
 
 ```bash
-python extract_remote.py
+python main.py
 ```
 
-### 5. Server Endpoints:
+### 5. Query the backend endpoints:
 
 ```bash
 # Replace '/path/to/your/file.pdf' with the actual path to the PDF file
 curl -X POST -F "pdf_file=@./PDFs/property4.pdf" "http://127.0.0.1:5000/extract"
 
-curl -X POST -F "query=I have kids, any properties that are child-friendly?" "http://127.0.0.1:5000/query"
+curl -X POST -F "query=Do you have any properties in the JVC?" "http://127.0.0.1:5000/query"
 ```
 
 

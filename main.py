@@ -1,5 +1,5 @@
 from utils.extract_info_from_pdf import extract_info_from_pdf
-from utils.query_db import find_similar_documents
+from utils.query_llm import ask_question, generate_rag__chain
 from werkzeug.utils import secure_filename
 from flask import Flask, request
 from dotenv import load_dotenv
@@ -8,31 +8,37 @@ import os
 app = Flask(__name__)
 
 load_dotenv()
-
 OPEN_AI_KEY = os.getenv('OPEN_AI_KEY')
-UPLOAD_FOLDER = 'uploads'
-
+UPLOAD_FOLDER = 'temp_uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
-
 
 
 @app.route('/query', methods=['POST'])
 def query():
-  query = request.form['query']
+    """
+    FLASK API endpoint to query the LLM model
+    @ return: response from the LLM model
+    """
 
-  if query == '':
-    return 'No query provided', 400
+    # todo, needs also take a chat id to load the history from the db
+    # also should be cacheing the rag_chain 
+    query = request.form['query']
+
+    if query == '':
+        return 'No query provided', 400
    
-  find_similar_documents(query)
+    rag_chain = generate_rag__chain()
+    msg = ask_question(query, rag_chain, chat_history=[])
 
-  return 'Query received and processed successfully'
-
-   
+    return msg 
 
 @app.route('/extract', methods=['POST'])
 def extract():
-
+    '''
+    FLASK API endpoint to extract information and upload chunked data to mongodb 
+    @ params: request object with a PDF file see README for more details
+    @ return: response from the LLM model
+    '''
     def allowed_file(filename):
         return '.' in filename and filename.rsplit('.', 1)[1].lower() in {'pdf'}
 

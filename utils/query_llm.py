@@ -104,17 +104,47 @@ def format_docs(docs):
     return "\n\n".join(doc.page_content for doc in docs)
 
 
+def ask_question(q, rag_chain, chat_history): 
+    """
+    This function takes a question as input and returns the answer to the question
+    @ param: q: str: question
+    @ return: str: answer
+    """
+    ai_msg = rag_chain.invoke({"question": q, "chat_history": chat_history})
+    chat_history.extend([HumanMessage(content=q), ai_msg])
+    return ai_msg.content
+
+
 if __name__ == "__main__":
 
 
     rag_chain = generate_rag__chain()
     
     chat_history = []
+
+    question = "Are there any properties in JVC?"
+    print('>human msg: ' , question + "\n")
+
+    ai_msg = ask_question(question, rag_chain, chat_history)
+
+    print('ai msg: ', ai_msg)
+
+    second_question = "What is the price of the property in JVC"
+    print('>human msg: ', second_question)
+
+    ai_msg2 = ask_question(second_question, rag_chain, chat_history)
+
+    print('ai msg: ', ai_msg2)
     
+
+    '''
     question = "Are there any properties in JVC?"
     print('>human msg: ' , question + "\n")
     ai_msg = rag_chain.invoke({"question": question, "chat_history": chat_history})
     chat_history.extend([HumanMessage(content=question), ai_msg])
+
+    print(ai_msg)
+    input()
     
     print('>ai msg: ', ai_msg.content + "\n")
     #print('chat history1: ', chat_history)
@@ -131,6 +161,8 @@ if __name__ == "__main__":
     print('human msg: ', third_question + "\n")
     ai_msg3 = rag_chain.invoke({"question": third_question, "chat_history": chat_history})
     chat_history.extend([HumanMessage(content=third_question), ai_msg3])
+
+    
     
     print('ai msg: ', ai_msg3.content + "\n")
     #print('chat history3: ', chat_history)
@@ -141,5 +173,5 @@ if __name__ == "__main__":
         ai = rag_chain.invoke({"question": q, "chat_history": chat_history})
         print('ai msg: ', ai.content + "\n")
         chat_history.extend([HumanMessage(content=q), ai])
-
+    '''
 
